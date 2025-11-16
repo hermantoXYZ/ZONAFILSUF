@@ -1,14 +1,266 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Finance Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-button" onclick="toggleSidebar()">
+                    <span class="material-icons">menu</span>
+                </button>
+                <div class="logo">
+                    <img src="https://ssl.gstatic.com/finance/favicon/finance_770x40.png" alt="Google Finance">
+                </div>
+            </div>
+            <div class="search-bar">
+                <span class="material-icons">search</span>
+                <input type="text" placeholder="Search for stocks, ETFs and more">
+            </div>
+            <div class="header-right">
+                <span class="material-icons">apps</span>
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocJ8g-8_2W4qJ_q-9g-p-3p-3p-3p-3p-3p=s96-c-rg-br100" alt="User" class="user-avatar">
+            </div>
+        </header>
+
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li class="active"><span class="material-icons">home</span> Home</li>
+                <li><span class="material-icons">trending_up</span> Market trends</li>
+                <li><span class="material-icons">add</span> Portfolios</li>
+                <li><span class="material-icons">bar_chart</span> FronX</li>
+                <li><span class="material-icons">playlist_add</span> Watchlists</li>
+            </ul>
+            <div class="most-active-title">MOST ACTIVE</div>
+            <ul>
+                <li><span class="material-icons down-arrow">arrow_downward</span> Bumi Resources <span class="change">-1.79%</span></li>
+                <li><span class="material-icons up-arrow">arrow_upward</span> GoTo Gojek T... <span class="change">+1.56%</span></li>
+                <li><span class="material-icons up-arrow">arrow_upward</span> Sinergi Inti... <span class="change">+15.91%</span></li>
+                <li><span class="material-icons up-arrow">arrow_upward</span> Central Prote... <span class="change">+7.81%</span></li>
+                <li><span class="material-icons down-arrow">arrow_downward</span> Darma Henwa... <span class="change">-4.65%</span></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="market-overview">
+                <div class="market-data">
+                    <span>SSE</span>
+                    <span class="value">-0.97%</span>
+                    <span class="change">-39.01</span>
+                </div>
+                <div class="market-data">
+                    <span>HSI</span>
+                    <span class="value">-1.85%</span>
+                    <span class="change">-500.57</span>
+                </div>
+                <div class="market-data">
+                    <span>SENSEX</span>
+                    <span class="value">+0.100%</span>
+                    <span class="change">+84.11</span>
+                </div>
+                <div class="market-data">
+                    <span>NIFTY 50</span>
+                    <span class="value">+0.12%</span>
+                    <span class="change">+30.90</span>
+                </div>
+            </div>
+
+            <div class="top-movers">
+                <h2>Top movers in your lists</h2>
+                <div class="stock">
+                    <div class="stock-info">
+                        <span class="stock-ticker">BBRI</span>
+                        <span class="stock-name">Bank Rakyat Indonesia (Pe...</span>
+                    </div>
+                    <div class="stock-price">
+                        <span>Rp3,900.00</span>
+                        <span class="stock-change-positive">+Rp30.00</span>
+                        <span class="stock-percentage-positive">+0.78%</span>
+                    </div>
+                    <span class="material-icons check-circle">check_circle</span>
+                </div>
+            </div>
+
+            <div class="financial-news">
+                <h2>Today's financial news</h2>
+                <div class="news-tabs">
+                    <button class="active">Top stories</button>
+                    <button>Local market</button>
+                    <button>World markets</button>
+                </div>
+                <div class="news-articles">
+                    <div class="article">
+                        <div class="article-text">
+                            <div class="article-source">Pi Network • 1 day ago</div>
+                            <div class="article-title">Pi App Studio Updates: Code Download/Upload Feature and User Experience Improvements</div>
+                        </div>
+                        <img src="https://storage.googleapis.com/gemini-studio-project-images/google-finance-clone/news1.png" alt="News 1">
+                    </div>
+                    <div class="article">
+                        <div class="article-text">
+                            <div class="article-source">ArenaEV • 1 day ago</div>
+                            <div class="article-title">Dongfeng's new solid-state battery promises 1,000-kilometer electric cars by 2026 - ArenaEV</div>
+                        </div>
+                        <img src="https://storage.googleapis.com/gemini-studio-project-images/google-finance-clone/news2.png" alt="News 2">
+                    </div>
+                    <div class="article">
+                        <div class="article-text">
+                            <div class="article-source">allkpop • 1 day ago</div>
+                            <div class="article-title">Cuckoo Electronics sues Kim Soo Hyun for 2 billion KRW (about 1.37 million USD), court orders "Specify grounds for claim"</div>
+                        </div>
+                        <img src="https://storage.googleapis.com/gemini-studio-project-images/google-finance-clone/news3.png" alt="News 3">
+                    </div>
+                    <div class="article">
+                        <div class="article-text">
+                            <div class="article-source">Jakarta Globe • 1 day ago</div>
+                            <div class="article-title">Indonesia to Scale Back Coal Output Next Year on Price Slump</div>
+                        </div>
+                        <img src="https://storage.googleapis.com/gemini-studio-project-images/google-finance-clone/news4.png" alt="News 4">
+                    </div>
+                </div>
+            </div>
+
+            <div class="discover-more">
+                <h2>Discover more</h2>
+                <p>You may be interested in <span class="material-icons">info_outline</span></p>
+                <div class="discover-grid-container">
+                    <button class="scroll-button left"><span class="material-icons">chevron_left</span></button>
+                    <div class="discover-grid">
+                        <div class="stock-card">
+                            <div class="stock-card-ticker doid">DOID</div>
+                            <div class="stock-card-name">PT BUMA Internasional Gru...</div>
+                            <div class="stock-card-price">Rp338.00</div>
+                            <div class="stock-card-change-positive"><span class="material-icons">arrow_upward</span> 1.20%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-card-ticker lppf">LPPF</div>
+                            <div class="stock-card-name">Matahari Department Store...</div>
+                            <div class="stock-card-price">Rp1,685.00</div>
+                            <div class="stock-card-change-negative"><span class="material-icons">arrow_downward</span> 0.88%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-card-ticker beks">BEKS</div>
+                            <div class="stock-card-name">Bank Pembangunan Daerah Banten Tb...</div>
+                            <div class="stock-card-price">Rp28.00</div>
+                            <div class="stock-card-change-neutral">0.00%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-card-ticker jsmr">JSMR</div>
+                            <div class="stock-card-name">Jasa Marga (Persero) Tbk PT</div>
+                            <div class="stock-card-price">Rp3,500.00</div>
+                            <div class="stock-card-change-negative"><span class="material-icons">arrow_downward</span> 1.41%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-card-ticker pgas">PGAS</div>
+                            <div class="stock-card-name">Perusahaan Gas Negara Tbk PT</div>
+                            <div class="stock-card-price">Rp1,730.00</div>
+                            <div class="stock-card-change-negative"><span class="material-icons">arrow_downward</span> 0.57%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-card-ticker bnbr">BNBR</div>
+                            <div class="stock-card-name">Bakrie & Brothers Tbk PT</div>
+                            <div class="stock-card-price">Rp47.00</div>
+                            <div class="stock-card-change-negative"><span class="material-icons">arrow_downward</span> 6.00%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                    </div>
+                    <button class="scroll-button right"><span class="material-icons">chevron_right</span></button>
+                </div>
+            </div>
+
+            <div class="recently-searched">
+                <h2>Recently searched</h2>
+                <div class="discover-grid-container">
+                    <button class="scroll-button left"><span class="material-icons">chevron_left</span></button>
+                    <div class="discover-grid">
+                        <div class="stock-card">
+                            <div class="stock-card-ticker index">INDEX</div>
+                            <div class="stock-card-name">Austrian Traded Index</div>
+                            <div class="stock-card-price">4,853.39</div>
+                            <div class="stock-card-change-negative"><span class="material-icons">arrow_downward</span> 0.99%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-card-ticker asri">ASRI</div>
+                            <div class="stock-card-name">Alam Sutera Realty Tbk PT</div>
+                            <div class="stock-card-price">Rp162.00</div>
+                            <div class="stock-card-change-negative"><span class="material-icons">arrow_downward</span> 1.22%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-card-ticker asii">ASII</div>
+                            <div class="stock-card-name">Astra International Tbk PT</div>
+                            <div class="stock-card-price">Rp6,400.00</div>
+                            <div class="stock-card-change-positive"><span class="material-icons">arrow_upward</span> 0.39%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-card-ticker elsa">ELSA</div>
+                            <div class="stock-card-name">Elnusa Tbk PT</div>
+                            <div class="stock-card-price">Rp540.00</div>
+                            <div class="stock-card-change-positive"><span class="material-icons">arrow_upward</span> 1.89%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-card-ticker index">INDEX</div>
+                            <div class="stock-card-name">S&P 500</div>
+                            <div class="stock-card-price">6,734.11</div>
+                            <div class="stock-card-change-negative"><span class="material-icons">arrow_downward</span> 0.050%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-card-ticker bmri">BMRI</div>
+                            <div class="stock-card-name">Bank Mandiri (Persero) Tbk PT</div>
+                            <div class="stock-card-price">Rp4,750.00</div>
+                            <div class="stock-card-change-positive"><span class="material-icons">arrow_upward</span> 1.06%</div>
+                            <div class="add-button"><span class="material-icons">add</span></div>
+                        </div>
+                    </div>
+                    <button class="scroll-button right"><span class="material-icons">chevron_right</span></button>
+                </div>
+            </div>
+
+        </main>
+
+        <aside class="right-sidebar">
+            <div class="market-trends">
+                <h3>Market trends</h3>
+                <div class="trend-buttons">
+                    <button class="active"><span class="material-icons">show_chart</span> Market indexes</button>
+                    <button><span class="material-icons">bolt</span> Most active</button>
+                    <button><span class="material-icons">local_florist</span> Gainers</button>
+                    <button><span class="material-icons">trending_down</span> Losers</button>
+                    <button><span class="material-icons">eco</span> Climate leaders</button>
+                    <button><span class="material-icons">currency_bitcoin</span> Crypto</button>
+                    <button><span class="material-icons">paid</span> Currencies</button>
+                </div>
+            </div>
+        </aside>
+
+        <footer class="footer">
+            <div class="google-logo">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+            </div>
+            <div class="footer-links">
+                <a href="#">Help</a>
+                <a href="#">Send feedback</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Disclaimer</a>
+            </div>
+        </footer>
+
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
