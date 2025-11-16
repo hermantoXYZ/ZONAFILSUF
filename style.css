@@ -303,26 +303,16 @@ body {
 }
 
 .discover-more,
-.recently-searched {
+.recently-searched,
+.popular-figures {
     margin-top: 40px;
 }
 
 .discover-more h2,
-.recently-searched h2 {
+.recently-searched h2,
+.popular-figures h2 {
     margin-top: 0;
     font-size: 20px;
-}
-
-.discover-more p {
-    color: #5f6368;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-}
-
-.discover-more p .material-icons {
-    font-size: 16px;
-    margin-left: 4px;
 }
 
 .discover-grid-container {
@@ -339,6 +329,58 @@ body {
 
 .discover-grid::-webkit-scrollbar {
     display: none;
+}
+
+.quote-card {
+    background-color: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 16px;
+    min-width: 280px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.philosopher-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.philosopher-category {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #e8f0fe;
+    color: #1967d2;
+}
+
+.quote-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+    flex-grow: 1;
+}
+
+.quote-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.quote-tags span {
+    font-size: 12px;
+    background-color: #f1f3f4;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
 .stock-card {
@@ -360,12 +402,6 @@ body {
     margin-bottom: 8px;
 }
 
-.doid { background-color: #3c4043; color: #fff; }
-.lppf { background-color: #d93025; color: #fff; }
-.beks { background-color: #d93025; color: #fff; }
-.jsmr { background-color: #fbbc04; color: #000; }
-.pgas { background-color: #1e8e3e; color: #fff; }
-.bnbr { background-color: #ff6d00; color: #fff; }
 .index { background-color: #e8eaed; color: #202124; }
 .asri { background-color: #4285f4; color: #fff; }
 .asii { background-color: #4285f4; color: #fff; }
@@ -424,6 +460,30 @@ body {
     cursor: pointer;
 }
 
+.figure-card {
+    background-color: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 16px;
+    min-width: 160px;
+    margin-right: 16px;
+    text-align: center;
+}
+
+.figure-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.figure-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
 .scroll-button {
     position: absolute;
     top: 50%;
@@ -444,6 +504,10 @@ body {
 .scroll-button.right {
     right: -20px;
 }
+.scroll-button.left {
+    left: -20px;
+}
+
 
 .footer {
     grid-area: footer;
